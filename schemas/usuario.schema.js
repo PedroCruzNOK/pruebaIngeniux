@@ -4,7 +4,7 @@ const nombre = joi.string();
 const apellidopaterno = joi.string();
 const apellidomaterno = joi.string();
 const edad = joi.number().integer();
-const codigopostal = joi.number().integer().min(4).max(5);
+const codigopostal = joi.number().integer();
 const telefono = joi.string();
 const estadocivil = joi.string();
 const fechanacimiento= joi.date();
@@ -29,7 +29,7 @@ const createUsuarioSchema = joi.object({
   pais: pais.allow(),
   estado: estado.allow(),
   municipio: municipio.allow(),
-  localidaad: localidad.allow(),
+  localidad: localidad.allow(),
   idioma: idioma.allow(),
   pasatiempo: pasatiempo.allow(),
   preferencias: preferencias.allow(),
@@ -49,7 +49,7 @@ const updateUsuarioSchema = joi.object({
   pais: pais.allow(),
   estado: estado.allow(),
   municipio: municipio.allow(),
-  localidaad: localidad.allow(),
+  localidad: localidad.allow(),
   idioma: idioma.allow(),
   pasatiempo: pasatiempo.allow(),
   preferencias: preferencias.allow(),
